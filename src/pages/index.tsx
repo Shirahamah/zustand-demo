@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useFishStore } from '../libs/persist/store'
+import { Counter } from '../libs/redux/features/Counter'
 import { useStore } from '../libs/store'
 import styles from '../styles/Home.module.css'
 
@@ -47,6 +48,10 @@ const Home: NextPage = () => {
         <button onClick={()=>{
           resetAFish()
         }}>reset A Fish</button>
+      </div>
+      <div>
+        Redux
+        <Counter />
       </div>
     </>
   )
